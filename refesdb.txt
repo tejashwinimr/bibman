@@ -1,0 +1,1 @@
+CREATE TABLE `test`.`refes` ( `title` VARCHAR(100) NOT NULL , `author` VARCHAR(100) NOT NULL , `date_added` DATE NOT NULL , `date_published` DATE NOT NULL , `volume` VARCHAR(100) NOT NULL , `abstract` VARCHAR(1000) NOT NULL , `pages` INT NOT NULL , `user_id` INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (`user_id`)) ENGINE = MyISAM;
