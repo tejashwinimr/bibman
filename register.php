@@ -6,12 +6,19 @@
 		$errMsg = '';
 
 		// Get data from FROM
+		$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS users1(
+		  	id INT NOT NULL AUTO_INCREMENT,
+		  	name VARCHAR(45) DEFAULT NULL
+		  	username VARCHAR(45) DEFAULT NULL,
+		  	password VARCHAR(45),
+		  	PRIMARY KEY (id))");
+			$createUsers -> execute();
+
 		$name = $_POST['name'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		//$hash = $_POST['hash'];
-	
-
+		
 		
 		if($name == '')
 			$errMsg = 'Enter name';
@@ -39,13 +46,7 @@
     			else
     			{
     				//adding regitseration deatils to database. 
-    		$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS users1(
-		  	id INT NOT NULL AUTO_INCREMENT,
-		  	name VARCHAR(45) DEFAULT NULL
-		  	username VARCHAR(45) DEFAULT NULL,
-		  	password VARCHAR(45),
-		  	PRIMARY KEY (id))");
-			$createUsers -> execute();
+    		
 
 			$insert = $db -> prepare("INSERT INTO users1 (name, username, password) VALUES(?,?,?)");
 			$insert -> bindParam(1, $name);
