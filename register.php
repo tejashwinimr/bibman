@@ -40,7 +40,7 @@
     			{
     				//adding regitseration deatils to database. 
     		$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS users1(
-		  	id INT(11) NOT NULL AUTO_INCREMENT,
+		  	id INT NOT NULL AUTO_INCREMENT,
 		  	name VARCHAR(45) DEFAULT NULL
 		  	username VARCHAR(45) DEFAULT NULL,
 		  	password VARCHAR(45),
