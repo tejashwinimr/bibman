@@ -40,7 +40,7 @@
 						$_SESSION['username'] = $data['username'];
 
 						$_SESSION['id'] = $data['id'];
-						header('Location: dashboard.php');
+						header('Location: index.php');
 						exit;
 					}
 					else
@@ -59,7 +59,7 @@
 			$_SESSION['logged_in'] = true;
 			$_SESSION['user_id'] = $result['id'];
 			//return true;
-			header('Location:dashboard.php');
+			header('Location:index.php');
 			exit();
 	//}*/
 

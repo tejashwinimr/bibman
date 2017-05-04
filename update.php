@@ -25,7 +25,7 @@
 		        ':password' => $password,
 		        ':username' => $_SESSION['username']
 		      ));
-		      header('Location: dashboard.php');
+		      header('Location: index.php');
 						exit;
 				}
 			catch(PDOException $e) {
@@ -112,7 +112,7 @@ Guitar Template is provided by www.tooplate.com
 
 							<input type="submit" name='update' value="Update" class='submit'/>
 							<div class="float_r">
-							<input type="reset" name='cancel' value="Cancel" class="reset" onclick="location.href='dashboard.php'" />
+							<input type="reset" name='cancel' value="Cancel" class="reset" onclick="location.href='index.php'" />
 								
 									
 									
