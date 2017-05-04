@@ -8,9 +8,9 @@
 		// Get data from FROM
 		$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS users1(
 		  	id INT NOT NULL AUTO_INCREMENT,
-		  	name VARCHAR(45) DEFAULT NULL
+		  	name VARCHAR(45) DEFAULT NULL,
 		  	username VARCHAR(45) DEFAULT NULL,
-		  	password VARCHAR(45),
+		  	password VARCHAR(45) DEFAULT NULL,
 		  	PRIMARY KEY (id))");
 			$createUsers -> execute();
 
