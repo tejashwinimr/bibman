@@ -1,6 +1,6 @@
 <?php
 	require 'config.php';
-	include("setup.php");
+	//include("setup.php");
 
 	if(isset($_POST['login'])) {
 
