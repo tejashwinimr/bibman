@@ -39,7 +39,7 @@
     			else
     			{
     				//adding regitseration deatils to database. 
-    				$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS users(
+    		$createUsers = $db -> prepare("CREATE TABLE IF NOT EXISTS 'users'(
 		  	id INT(11) NOT NULL AUTO_INCREMENT,
 		  	name VARCHAR(45) DEFAULT NULL
 		  	username VARCHAR(45) DEFAULT NULL,
@@ -47,7 +47,7 @@
 		  	PRIMARY KEY (id))");
 			$createUsers -> execute();
 
-			$insert = $db -> prepare("INSERT INTO users (name, username, password) VALUES(?,?,?)");
+			$insert = $db -> prepare("INSERT INTO 'users' (name, username, password) VALUES(?,?,?)");
 			$insert -> bindParam(1, $name);
 			$insert -> bindParam(2, $username);
 			$insert -> bindParam(3, $password);
